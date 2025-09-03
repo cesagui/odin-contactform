@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --left-section-width: 33%;
+    --secondary-color: #596D48;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden; /* Prevents scrollbars */
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    height:100vh;
+    align-items: stretch;
+    gap: 0;
+}
+
+.left-section{
+    width: var(--left-section-width);
+    background-image: url('img/joes-rows.JPG');
+    background-position: 50% 33%;
+    background-size: 70vh;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section>p{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+    font-size:2em;
+}
+
+.right-section{
+    background-color:#F9FAFB;
+    width: calc(100% - var(--left-section-width));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-section>p:first-child{
+    font-weight: 200;
+    margin:0;
+}
+.right-section>p{
+    font-size: 1.5em;
+    padding: 1.5em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: #FFFFFF;
+    border: white;
+    filter: drop-shadow(#e1e1e1 0 1em 6px);
+    overflow: hidden;
+}
+fieldset>p{
+    padding-left: 0.75em;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+.row {
+    display: flex;
+    padding-left: 1.5em;
+    gap: 3em;
+}
+
+.row:last-child{
+    padding-bottom: 1.5em;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    width: 16em;
+    font-size: 0.8125em;
+    font-weight: 500;
+}
+
+input {
+    outline:none;
+    border-color:#F1F2F4;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 4px;
+}
+
+input:focus {
+    border-color: #3C66DC;
+    filter: drop-shadow(#e1e1e1 0 0.25em 2px);
+}
+
+input:invalid {
+  border: 2px solid #CA5252;
+}
+
+form p {
+    font-size: 2em;
+}
+
+button {
+    margin-left: 3em;
+    margin-top: 2.5em;
+    padding: 1em 4em 1em 4em;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background-color: var(--secondary-color);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.right-section>p:last-child {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5em;
+    margin-left: 3em;
+}
+
+p:last-child>a{
+    color: var(--secondary-color);
+    font-weight: 700;
+}
